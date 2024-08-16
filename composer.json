@@ -1,0 +1,16 @@
+{
+    "name": "luan/clube",
+    "autoload": {
+        "psr-4": {
+            "luan\\clube\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "luan"
+        }
+    ],
+    "require": {
+        "coffeecode/router": "^1.0"
+    }
+}
