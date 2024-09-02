@@ -19,25 +19,25 @@
 <body>
     <div class="container-login">
 
-        <form action="">
+<form action="get">
 <div class="container-logo"><img src="/PROJETO_LUAN/public/img/logo" alt="logo"></div>
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome</label>
-                <input type="nome" class="form-control" id="nome">
+<input name="name" type="nome" class="form-control" id="nome">
             </div>
             <div class="mb-3">
                 <label for="telefone" class="form-label">Telefone</label>
-                <input type="telefone" class="form-control" id="telefone">
+                <input name="fone" type="telefone" class="form-control" id="telefone">
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email </label>
-                <input type="email" class="form-control" id="email">
+                <input name="email" type="email" class="form-control" id="email">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password">
+                <input name=""password type="password" class="form-control" id="password">
             </div>
-            <button type="button" class="btn btn-primary">Login</button>
+<button type="button" class="btn btn-primary">Cadastrar</button>
             <div class="container-action">
 
                 <a href="login">Voltar</a>
