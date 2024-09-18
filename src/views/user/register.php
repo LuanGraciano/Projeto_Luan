@@ -19,7 +19,7 @@
 <body>
     <div class="container-login">
 
-<form action="get">
+<form method="post" action="/PROJETO_LUAN/register/save">
 <div class="container-logo"><img src="/PROJETO_LUAN/public/img/logo" alt="logo"></div>
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome</label>
@@ -35,9 +35,9 @@
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Password</label>
-                <input name=""password type="password" class="form-control" id="password">
+                <input name="password" type="password" class="form-control" id="password">
             </div>
-<button type="button" class="btn btn-primary">Cadastrar</button>
+<button type="submit" class="btn btn-primary">Cadastrar</button>
             <div class="container-action">
 
                 <a href="login">Voltar</a>

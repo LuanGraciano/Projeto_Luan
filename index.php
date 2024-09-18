@@ -2,6 +2,9 @@
 
 require_once './vendor/autoload.php';
 
+session_start();
+
+
 use luan\clube\Routers\Loader;
 //use luan\clube\Models\Users\Users;
 
