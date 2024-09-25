@@ -9,7 +9,7 @@ class loader
     public function __construct()
     {
         $this->message = new Message();
-        
+
     }
     //C:\xampp\htdocs\src\Helpers\Template/../../view
     //C:\xampp\htdocs\src\views
@@ -32,6 +32,6 @@ public function render($template, $default = true, $data = [])
         if ($default ) {
             require_once(realpath(dirname(__FILE__) . "/../../views/partias/footer.php"));    
         }
-        $this->message->destroyMessage($message);
+        $this->message->destroyMessage();
     }
 }

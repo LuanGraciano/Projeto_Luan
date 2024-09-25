@@ -6,19 +6,18 @@ session_start();
 
 
 use luan\clube\Routers\Loader;
-//use luan\clube\Models\Users\Users;
+use luan\clube\Models\Users\Users;
 
-//$user = new Users();
+$user = new Users();
 
-//$data = [
-//    'phone' => "35988034918",
- //   'email' => "luan@faex.com",
- //   'name' => "Luan",
-//    'password' => password_hash('123456', PASSWORD_DEFAULT),
+$condition = [
+    "email" => "luan@bol.com"
+    
+    
 
-//];
+];
 
-//$user->create($data);
+$data = $user->findOne($condition, "name, email");
 
 $loader = new Loader();
 $loader->execute();

@@ -3,7 +3,7 @@ namespace luan\clube\Controllers\User;
 
 use luan\clube\Helpers\Template\Loader;
 
-class Login
+class login
 {
     private Loader $template;
 

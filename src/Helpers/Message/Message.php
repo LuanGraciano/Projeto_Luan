@@ -3,35 +3,33 @@
 namespace luan\clube\Helpers\Message;
 
 
-class Message
+class Message 
 {
     public function setMessageSuccess($message)
     {
-        $_SESSION['message'] = [
-            'type' =>'success',
-            'message' => $message
-        ];
-    }
-    public function setMessageError($message)
-    {
-        $_SESSION['message'] = [
-            'type' =>'danger',
+        $_SESSION['message'][] = [
+            'type'  =>'success',
             'message' => $message
         ];
     }
 
-    public function getMessages()
-    {
-        if(isset($_SESSION['message'])){
+    public function setMessageError($message) {
+        $_SESSION['message'][] = [
+            'type'  =>'danger',
+            'message' => $message
+        ];
+    }
+
+    public function getMessages() {
+        if(isset($_SESSION['message'])) {
             return $_SESSION['message'];
         }
         return false;
     }
-    public function destroyMessage($message)
-    {
-        if(isset($_SESSION['message'])){
+
+    public function destroyMessage() {
+        if(isset($_SESSION['message'])) {  
             unset($_SESSION['message']);
         }
     }
-
 }
