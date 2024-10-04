@@ -5,13 +5,15 @@ use Luan\Clube\Helpers\Template\Loader;
 
 class Create
 {
+    protected Loader $template;
     public function __construct() {
         $this->template = new Loader();
     }
 
     public function execute()
     {   
-        echo "tela de criação";
+       
+        $this->template->render('panel/clubeCreate', true);
     }
 
 }

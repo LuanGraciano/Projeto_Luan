@@ -23,8 +23,9 @@ class Loader
     public function execute() 
     {
         $this->userRouter->execute();  
-        $this->router->dispatch();
+        
         $this->clubeRouters->execute();
+        $this->router->dispatch();
         
         if ($this->router->error()) {
             echo "404";

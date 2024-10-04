@@ -5,13 +5,15 @@ use Luan\Clube\Helpers\Template\Loader;
 
 class Clube
 {
+    protected Loader $template;
     public function __construct() {
         $this->template = new Loader();
     }
 
     public function execute()
     {   
-        echo "Listagem de agendamentos";
+        
+        $this->template->render('panel/clube', true);
     }
 
 }

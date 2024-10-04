@@ -5,13 +5,14 @@ use Luan\Clube\Helpers\Template\Loader;
 
 class Edit
 {
+    protected Loader $template;
     public function __construct() {
         $this->template = new Loader();
     }
 
     public function execute()
     {   
-        echo "tela de editação";
+        $this->template->render('panel/clubeEdit', true);
     }
 
 }
