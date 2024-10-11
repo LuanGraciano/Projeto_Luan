@@ -6,7 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/PROJETO_LUAN/public/css/style.css">
-    <title>Header Estilizado</title>
+    <title>Clube de Membros</title>
     <style>
         .header {
             background: linear-gradient(90deg, #007bff 0%, #0056b3 100%); /* Gradiente moderno */
@@ -52,14 +52,17 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="edit">Edição</a>
-                    </li>                   
+                    </li>  
+                    <li class="nav-item">
+                        <a class="nav-link" href="/projeto_Luan/panel/clube/logout">Sair</a>
+                    </li>                  
                 </ul>
             </nav>
         </div>
     </header>
 
     <div class="container">
-        <h2>Bem-vindo ao Clube de Membros!</h2>
+        <h2>Bem-vindo <?= $_SESSION["user"]['name']?></h2>
         <!-- O conteúdo da página vai aqui -->
     </div>
     

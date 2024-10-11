@@ -15,22 +15,22 @@
 <body>
     <div class="container-login">
 
-        <form action="">
+        <form action="/PROJETO_LUAN/login/validate" method="post">
 <div class="container-logo"><img src="/PROJETO_LUAN/public/img/logo" alt="logo"></div>
             <div class="container-logo"></div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email </label>
-                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                <input name="email" type="email" class="form-control" id="email" placeholder="name@example.com">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" placeholder=>
+                <input name="password" type="password" class="form-control" id="password" placeholder=>
             </div>
-            <button type="button" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary">Login</button>
             <div class="container-action">
                 
                 <span>Não possui conta</span>
-                <a href="register">Clique aqui</a>
+                <a href="/PROJETO_LUAN/register">Clique aqui</a>
             </div>
         </form>
 

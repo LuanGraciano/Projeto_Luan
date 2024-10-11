@@ -35,7 +35,7 @@ class LoginPost
         }
 
         if(!$success) {
-            header('location: /login');
+            header('location: /PROJETO_LUAN/login');
             return;
         }
 
@@ -45,18 +45,18 @@ class LoginPost
 
         if(!$user) {
             $this->message->setMessageError("Usuário não encontrado");
-            header('location: /login');
+            header('location: /PROJERO_LUAN/login');
             return;
         }
         
         if(!password_verify($data['password'], $user->password)) {
             $this->message->setMessageError("Usuario ou senha invalidos");
-            header('location: /login');
+            header('location: /PROJETO_LUAN/login');
             return;
         }
         
         $this->userSession->create($user->id, $user->name, $user->email);
 
-        header('location: /panel/clube/');
+        header('location: /PROJETO_LUAN/panel/clube/');
     }
 }

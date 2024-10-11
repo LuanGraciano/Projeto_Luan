@@ -9,7 +9,7 @@ class UserSession
 {
     public function handle(Router $router) {
         if ($this->getSession() == null) {
-            $router->redirect('/login');
+            $router->redirect('/projeto_Luan/login');
         }
 
         return true;

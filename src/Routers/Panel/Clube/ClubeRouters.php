@@ -19,11 +19,13 @@ class ClubeRouters
 
         $this->router->namespace('Luan\Clube\Controllers\Panel\Clube');
                                                                                            
-        $this->router->get("/panel/clube/", 'Clube:execute');
+        $this->router->get("/panel/clube/", 'Clube:execute', middleware: UserSession::class);
 
-        $this->router->get("/panel/clube/create", 'Create:execute');
+        $this->router->get("/panel/clube/create", 'Create:execute', middleware: UserSession::class);
 
-        $this->router->get("/panel/clube/edit", 'Edit:execute');
+        $this->router->get("/panel/clube/edit", 'Edit:execute', middleware: UserSession::class);
+
+        $this->router->get("/panel/clube/logout", 'Logout:execute', middleware: UserSession::class);
     }
 
 }
