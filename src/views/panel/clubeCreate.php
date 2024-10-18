@@ -48,10 +48,10 @@
 
     <div class="container mt-5">
         <h1 class="text-center">Criação de Membro</h1>
-        <form action="/criar-membro" method="POST" class="mt-4">
+        <form action="/PROJETO_LUAN/panel/clube/create/save" method="POST" class="mt-4">
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome:</label>
-                <input type="text" class="form-control" id="nome" name="nome" required>
+                <input type="name" class="form-control" id="nome" name="nome" required>
             </div>
             <div class="mb-3">
                 <label for="endereco" class="form-label">Endereço:</label>
@@ -59,11 +59,11 @@
             </div>
             <div class="mb-3">
                 <label for="data-adesao" class="form-label">Data de Adesão:</label>
-                <input type="date" class="form-control" id="data-adesao" name="data-adesao" required>
+                <input type="date" class="form-control" id="data-adesao" name="data_de_adesao" required>
             </div>
             <div class="mb-3">
                 <label for="tipo-membresia" class="form-label">Tipo de Membresia:</label>
-                <select class="form-select" id="tipo-membresia" name="tipo-membresia" required>
+                <select class="form-select" id="tipo-membresia" name="tipo_de_membresia" required>
                     <option value="normal">Normal</option>
                     <option value="premium">Premium</option>
                     <option value="estudante">Estudante</option>
@@ -73,7 +73,7 @@
                 <label for="status" class="form-label">Status do Membro:</label>
                 <select class="form-select" id="status" name="status" required>
                     <option value="ativo">Ativo</option>
-                    <option value="desligado">Desligado</option>
+                    <option value="desligado">Inativo</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-success">Criar Membro</button>

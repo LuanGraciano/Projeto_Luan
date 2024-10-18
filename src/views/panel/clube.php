@@ -26,29 +26,20 @@
                     <th>Ações</th>
                 </tr>
             </thead>
-            <tbody>
+            <?php foreach ($clubes as $key => $clube): ?>
                 <tr>
-                    <td>João da Silva</td>
-                    <td>Rua A, 123</td>
-                    <td>01/01/2023</td>
-                    <td>Platinum</td>
-                    <td>Ativo</td>
+                    <td><?= $clube['nome'] ?></td>
+                    <td><?= $clube['endereco'] ?></td>
+                    <td><?= $clube['data_de_adesao'] ?></td>
+                    <td><?= $clube['tipo_de_membresia'] ?></td>
+                    <td><?= $clube['status'] ?></td>
                     <td>
                         <a href="edit?id=1" class="btn btn-warning">Editar</a>
                         <a href="delete?id=1" class="btn btn-danger">Excluir</a>
                     </td>
                 </tr>
-                <tr>
-                    <td>Maria Oliveira</td>
-                    <td>Rua B, 456</td>
-                    <td>15/02/2023</td>
-                    <td>Gold</td>
-                    <td>Ativo</td>
-                    <td>
-                        <a href="edit?id=2" class="btn btn-warning">Editar</a>
-                        <a href="delete?id=2" class="btn btn-danger">Excluir</a>
-                    </td>
-                </tr>
+            <?php endforeach;?>           
+
             </tbody>
         </table>
     </div>

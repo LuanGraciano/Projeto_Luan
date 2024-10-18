@@ -23,6 +23,8 @@ class ClubeRouters
 
         $this->router->get("/panel/clube/create", 'Create:execute', middleware: UserSession::class);
 
+        $this->router->post("/panel/clube/create/save", 'CreatePost:execute', middleware: UserSession::class);
+
         $this->router->get("/panel/clube/edit", 'Edit:execute', middleware: UserSession::class);
 
         $this->router->get("/panel/clube/logout", 'Logout:execute', middleware: UserSession::class);

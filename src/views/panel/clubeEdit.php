@@ -68,11 +68,11 @@
             </div>
             <div class="mb-3">
                 <label for="data-adesao" class="form-label">Data de Adesão:</label>
-                <input type="date" class="form-control" id="data-adesao" name="data-adesao" required>
+                <input type="date" class="form-control" id="data-adesao" name="data_de_adesao" required>
             </div>
             <div class="mb-3">
                 <label for="tipo-membresia" class="form-label">Tipo de Membresia:</label>
-                <select class="form-select" id="tipo-membresia" name="tipo-membresia" required>
+                <select class="form-select" id="tipo-membresia" name="tipo_de_membresia" required>
                     <option value="normal">Normal</option>
                     <option value="premium">Premium</option>
                     <option value="estudante">Estudante</option>
