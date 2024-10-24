@@ -60,22 +60,22 @@
         <form action="/editar-membro" method="POST" class="mt-4">
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome:</label>
-                <input type="text" class="form-control" id="nome" name="nome" required>
+                <input value="<?= $clube['nome'] ?>" type="name" required name="nome" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="endereco" class="form-label">Endereço:</label>
-                <input type="text" class="form-control" id="endereco" name="endereco" required>
+                <input value="<?= $clube['endereco'] ?>" type="endereco" required name="nome" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="data-adesao" class="form-label">Data de Adesão:</label>
-                <input type="date" class="form-control" id="data-adesao" name="data_de_adesao" required>
+                <input value="<?= $clube['data_de_adesao'] ?>" type="data_de_adesao" required name="nome" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="tipo-membresia" class="form-label">Tipo de Membresia:</label>
                 <select class="form-select" id="tipo-membresia" name="tipo_de_membresia" required>
-                    <option value="normal">Normal</option>
-                    <option value="premium">Premium</option>
-                    <option value="estudante">Estudante</option>
+                    <option <?= $clube['tipo_de_membresia'] == 'normal' ? "selected" : ""  ?> value="normal">Normal</option>
+                    <option <?= $clube['tipo_de_membresia'] == 'premium' ? "selected" : ""  ?> value="premium">Premium</option>
+                    <option <?= $clube['tipo_de_membresia'] == 'estudante' ? "selected" : ""  ?> value="estudante">Estudante</option>
                 </select>
             </div>
             <div class="mb-3">

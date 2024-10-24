@@ -53,6 +53,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="edit">Edição</a>
                     </li>  
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="/projeto_Luan/panel/clube/logout">Sair</a>
                     </li>                  

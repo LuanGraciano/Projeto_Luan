@@ -34,7 +34,7 @@
                     <td><?= $clube['tipo_de_membresia'] ?></td>
                     <td><?= $clube['status'] ?></td>
                     <td>
-                        <a href="edit?id=1" class="btn btn-warning">Editar</a>
+                        <a href="/PROJETO_LUAN/panel/clube/edit/<?= $clube['id'] ?>" class="btn btn-warning">Editar</a>
                         <a href="delete?id=1" class="btn btn-danger">Excluir</a>
                     </td>
                 </tr>

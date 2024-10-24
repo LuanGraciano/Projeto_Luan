@@ -55,8 +55,8 @@ class LoginPost
             return;
         }
         
-        $this->userSession->create($user->id, $user->name, $user->email);
-
+        $this->userSession->create($user['id'], $user['name'], $user['email']);
+        
         header('location: /PROJETO_LUAN/panel/clube/');
     }
 }
