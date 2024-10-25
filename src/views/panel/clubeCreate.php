@@ -73,7 +73,7 @@
                 <label for="status" class="form-label">Status do Membro:</label>
                 <select class="form-select" id="status" name="status" required>
                     <option value="ativo">Ativo</option>
-                    <option value="desligado">Inativo</option>
+                    <option value="inativo">Inativo</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-success">Criar Membro</button>

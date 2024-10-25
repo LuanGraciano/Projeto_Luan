@@ -27,6 +27,8 @@ class ClubeRouters
 
         $this->router->get("/panel/clube/edit/{id}", 'Edit:execute', middleware: UserSession::class);
 
+        $this->router->post("/panel/clube/delete/{id}", 'Delete:execute', middleware: UserSession::class);
+
         $this->router->get("/panel/clube/logout", 'Logout:execute', middleware: UserSession::class);
     }
 

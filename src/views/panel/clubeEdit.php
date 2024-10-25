@@ -72,7 +72,7 @@
             </div>
             <div class="mb-3">
                 <label for="tipo-membresia" class="form-label">Tipo de Membresia:</label>
-                <select class="form-select" id="tipo-membresia" name="tipo_de_membresia" required>
+                <select class="form-select" id="tipo_de_membresia" name="tipo_de_membresia" required>
                     <option <?= $clube['tipo_de_membresia'] == 'normal' ? "selected" : ""  ?> value="normal">Normal</option>
                     <option <?= $clube['tipo_de_membresia'] == 'premium' ? "selected" : ""  ?> value="premium">Premium</option>
                     <option <?= $clube['tipo_de_membresia'] == 'estudante' ? "selected" : ""  ?> value="estudante">Estudante</option>
@@ -81,8 +81,8 @@
             <div class="mb-3">
                 <label for="status" class="form-label">Status do Membro:</label>
                 <select class="form-select" id="status" name="status" required>
-                    <option value="ativo">Ativo</option>
-                    <option value="desligado">Desligado</option>
+                    <option <?= $clube['status'] == 'ativo' ? "selected" : ""  ?> value="ativo">Ativo</option>
+                    <option <?= $clube['status'] == 'inativo' ? "selected" : ""  ?> value="inativo">Inativo</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-success">Salvar Alterações</button>

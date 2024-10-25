@@ -41,18 +41,18 @@
                     <ul class="list-unstyled">
                         <li><a href="/projeto_Luan/panel/clube/" class="footer-link">Membros</a></li>
                         <li><a href="create" class="footer-link">Criar Membro</a></li>
-                        <li><a href="edit" class="footer-link">Edição</a></li>
+                        
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h5>Siga-nos</h5>
-                    <a href="#" class="footer-icon"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="footer-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer-icon"><i class="fab fa-facebook">facebook</i></a>
+                    <a href="#" class="footer-icon"><i class="fab fa-twitter"></i>twitter</a>
+                    <a href="#" class="footer-icon"><i class="fab fa-instagram"></i>instagram</a>
                 </div>
             </div>
             <div class="mt-4">
-                <p>&copy; 2024 Clube de Membros. Todos os direitos reservados.</p>
+                <p>&copy; 2024 Clube de Membros. Desenvolvido por Luan</p>
             </div>
         </div>
     </footer>
