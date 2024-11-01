@@ -18,6 +18,8 @@ class ClubeRouters
     {
 
         $this->router->namespace('Luan\Clube\Controllers\Panel\Clube');
+
+        $this->router->get("/api/clubes/", 'ApiClube:execute');
                                                                                            
         $this->router->get("/panel/clube/", 'Clube:execute', middleware: UserSession::class);
 
@@ -26,6 +28,8 @@ class ClubeRouters
         $this->router->post("/panel/clube/create/save", 'CreatePost:execute', middleware: UserSession::class);
 
         $this->router->get("/panel/clube/edit/{id}", 'Edit:execute', middleware: UserSession::class);
+
+        $this->router->post("/panel/clube/edit/{id}", 'EditPost:execute', middleware: UserSession::class);
 
         $this->router->post("/panel/clube/delete/{id}", 'Delete:execute', middleware: UserSession::class);
 
