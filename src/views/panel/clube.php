@@ -13,6 +13,16 @@
     }
 </style>
 
+<div class="container-search">
+    <form action="/panel/clube/search" method="GET">
+        <input value="<?= $search ?>" name="nameFilter" type="text">
+        <button>Buscar</button>
+    </form>
+    <?php if ($search != "") { ?>
+        <a href="/panel/clube">Limpar</a>
+    <?php } ?>
+</div>
+
 <div class="container mt-4">
     <h2 class="mb-4">Listagem de Membros</h2>
     <table class="table table-striped">
@@ -41,7 +51,7 @@
                         </form>
                     </div>
                 </td>
-                
+
 
             </tr>
         <?php endforeach; ?>

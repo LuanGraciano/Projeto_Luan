@@ -14,12 +14,21 @@ class Clube
         $this->clubes = new Clubes();
     }
 
-    public function execute()
+    public function execute($data)
     {   
         
-        $clubes = $this->clubes->findAll();
+        $search = "";
+        if (isset($_GET['nameFilter'])) {
+            $search = $_GET['nameFilter'];
+            $clubes = $this->clubes->findAll([
+                "name_clube" => $_GET['nameFilter']
+            ]); 
+        } else {
+            $clubes = $this->clubes->findAll();
+        }
         $this->template->render('/panel/clube', true, [
-            "clubes" => $clubes
+            "clubes" => $clubes,
+            "search" => $search
         ]);
     }
 
