@@ -14,6 +14,8 @@ class ApiClube
     {   
         $clubes = $this->clubes->findAll();
         
-        echo json_encode($clubes);
+        echo json_encode([
+            "total_clubes" => count( $clubes)
+        ]);
     }
 }
