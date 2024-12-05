@@ -12,7 +12,8 @@ abstract class AbstractModel
 
     protected $connect;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->database = new Database();
         $this->connect = $this->database->execute();
     }
@@ -23,7 +24,7 @@ abstract class AbstractModel
         try {
             $column = "";
             $values = "";
-            foreach($data as $key => $value) {
+            foreach ($data as $key => $value) {
                 $column .= "$key,";
                 $values .= ":$key,";
             }
@@ -47,11 +48,11 @@ abstract class AbstractModel
     {
         $where = "";
         foreach ($condition as $key => $value) {
-            $where.= "$key = :$key AND ";
+            $where .= "$key = :$key AND ";
         }
         $where = rtrim($where, "AND ");
         $table = $this->table;
-        $sql = "SELECT $column FROM $table WHERE " .$where;
+        $sql = "SELECT $column FROM $table WHERE " . $where;
         $stmt = $this->connect->prepare($sql);
         $stmt->execute($condition);
 
@@ -59,24 +60,24 @@ abstract class AbstractModel
     }
 
     public function findAll($condition = [], $column = "*", $limit = false)
-    { 
+    {
         $where = "";
-        if (count($condition) > 0)  {
+        if (count($condition) > 0) {
             foreach ($condition as $key => $value) {
-                $where.= "$key = :$key AND ";
+                $where .= "$key = :$key AND ";
             }
             $where = rtrim($where, "AND ");
         } else {
             $where = "";
         }
 
-        $whereCodition = $where == "" ? $where : " WHERE " .$where;
-      
+        $whereCodition = $where == "" ? $where : " WHERE " . $where;
+
         $table = $this->table;
         if (!$limit) {
-            $sql = "SELECT $column FROM $table" .$whereCodition;
+            $sql = "SELECT $column FROM $table" . $whereCodition;
         } else {
-            $sql = "SELECT $column FROM $table " .$whereCodition . " limit $limit";
+            $sql = "SELECT $column FROM $table " . $whereCodition . " limit $limit";
         }
 
         $stmt = $this->connect->prepare($sql);
@@ -85,23 +86,23 @@ abstract class AbstractModel
         } else {
             $stmt->execute();
         }
-        
+
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
-        
+
     }
 
     public function update($data, $id)
     {
         try {
             $set = "";
-            foreach($data as $key => $value) {
+            foreach ($data as $key => $value) {
                 $set .= "$key = :$key,";
             }
-            
+
             $set = rtrim($set, ",");
             $table = $this->table;
             $sql = "UPDATE $table SET $set WHERE id = :id";
-         
+
             $stmt = $this->connect->prepare($sql);
             $data["id"] = $id;
             if ($stmt->execute(params: $data)) {
@@ -125,6 +126,6 @@ abstract class AbstractModel
         if ($response) {
             return true;
         }
-        return false; 
+        return false;
     }
 }

@@ -6,15 +6,17 @@ class EditPost
 {
     protected Clubes $clubes;
     protected Message $message;
-    public function __construct() {
+    public function __construct()
+    {
         $this->clubes = new Clubes();
         $this->message = new Message();
     }
     public function execute($data)
-    {    
+    {
         $id = $data['id'];
         unset($data['id']);
         $this->clubes->update($data, $id);
+
         $this->message->setMessageSuccess('Agendamento atualizado com sucesso');
         header('location: /PROJETO_LUAN/panel/clube/');
     }

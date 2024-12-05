@@ -1,61 +1,63 @@
 /* Resetando margens e padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Estilos gerais da página */
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  /* Container principal */
-  .container {
-    text-align: center;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Estilo do título e subtítulo */
-  header h1 {
-    font-size: 2.5rem;
-    color: #2C3E50;
-    margin-bottom: 10px;
-  }
-  
-  header p {
-    font-size: 1.1rem;
-    color: #7F8C8D;
-    margin-bottom: 30px;
-  }
-  
-  /* Estilos dos botões */
-  .buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .button {
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 15px 30px;
-    border-radius: 5px;
-    color: #fff;
-    background-color: #3498db;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #2980b9;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+  font-family: 'Lora', serif; /* Adicione uma fonte elegante */
+  background-color: #E9F7EF; /* Cor suave que remete à natureza */
+  color: #34495E; /* Cor neutra para texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container principal */
+.container {
+  text-align: center;
+  background-color: #FFFFFF; /* Fundo branco para contraste */
+  padding: 50px;
+  border-radius: 12px; /* Bordas suaves */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra mais marcante */
+  max-width: 500px;
+  width: 90%;
+}
+
+/* Título e subtítulo */
+header h1 {
+  font-size: 2.8rem; /* Tamanho maior para impacto */
+  color: #1ABC9C; /* Verde que remete à natureza e golfe */
+  margin-bottom: 15px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #7F8C8D;
+  margin-bottom: 40px;
+}
+
+/* Botões */
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.button {
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  border-radius: 50px; /* Bordas arredondadas para um visual moderno */
+  color: #FFFFFF;
+  background-color: #16A085; /* Verde escuro */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #148F77; /* Efeito hover sutil */
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}

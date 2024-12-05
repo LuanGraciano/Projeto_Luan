@@ -40,7 +40,7 @@
             <button type="submit" class="btn btn-primary">Cadastrar</button>
             <div class="container-action">
 
-                <a href="login">Voltar</a>
+                <a href="/projeto_luan">Voltar</a>
             </div>
         </form>
 

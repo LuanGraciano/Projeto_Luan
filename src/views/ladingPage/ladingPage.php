@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bem-vindo ao Clube!</title>
-  <link rel="stylesheet" href="ladingPage.css">
+  <link rel="stylesheet" href="/projeto_luan/public/css/ladingPage.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
